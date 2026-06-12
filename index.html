@@ -1,0 +1,1112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Owen Eghaghe — Azure Cloud Operations Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Canvas for particle background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-brand">
+          <span class="brand-bracket">&lt;</span>Owen<span class="brand-accent"
+            >.</span
+          >cloud<span class="brand-bracket">/&gt;</span>
+        </a>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#certifications" class="nav-link">Certs</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+          <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-eyebrow">
+            <span class="status-dot"></span>
+            <span>Available for new opportunities</span>
+          </div>
+          <h1 class="hero-name">
+            Hi, I'm <span class="gradient-text">Owen Eghaghe</span>
+          </h1>
+          <div class="hero-role">
+            <span class="role-prefix">// </span>
+            <span id="typed-text" class="typed-text"></span>
+            <span class="cursor">|</span>
+          </div>
+          <p class="hero-sub">
+            7+ years architecting scalable cloud infrastructures, automating
+            DevSecOps pipelines, and orchestrating Kubernetes workloads across
+            Azure and AWS.
+          </p>
+          <div class="hero-ctas">
+            <a href="#experience" class="btn-primary">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 8 16 12 12 16" />
+                <line x1="8" y1="12" x2="16" y2="12" />
+              </svg>
+              View My Experience
+            </a>
+            <a
+              href="https://drive.google.com/file/d/1XvxWMSbu1ZuHVCH10HD0YNzjHEJ4O3gA/view?usp=sharing"
+              class="btn-secondary"
+              download
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">7+</span
+              ><span class="stat-label">Years Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">3</span
+              ><span class="stat-label">Cloud Platforms</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <span class="stat-num">7</span
+              ><span class="stat-label">Certifications</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="cloud-viz">
+            <div class="orbit orbit-1">
+              <div class="orbit-icon" style="--i: 0">
+                <svg
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="40"
+                    height="40"
+                    rx="8"
+                    fill="#0078d4"
+                    opacity="0.15"
+                  />
+                  <path
+                    d="M20 8C14.477 8 10 12.477 10 18c0 .34.017.677.05 1.01C8.26 19.683 7 21.2 7 23c0 2.21 1.79 4 4 4h18c2.21 0 4-1.79 4-4 0-1.8-1.26-3.317-3.05-3.99.033-.333.05-.67.05-1.01 0-5.523-4.477-10-10-10z"
+                    fill="#0078d4"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="orbit orbit-2">
+              <div class="orbit-icon" style="--i: 1">
+                <svg
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="40"
+                    height="40"
+                    rx="8"
+                    fill="#06b6d4"
+                    opacity="0.15"
+                  />
+                  <path
+                    d="M12 20l4 4 8-8"
+                    stroke="#06b6d4"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <circle
+                    cx="20"
+                    cy="20"
+                    r="10"
+                    stroke="#06b6d4"
+                    stroke-width="1.5"
+                    opacity="0.6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="orbit orbit-3">
+              <div class="orbit-icon" style="--i: 2">
+                <svg
+                  viewBox="0 0 40 40"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    width="40"
+                    height="40"
+                    rx="8"
+                    fill="#3b82f6"
+                    opacity="0.15"
+                  />
+                  <path
+                    d="M20 10l3.09 6.26L30 17.27l-5 4.87 1.18 6.88L20 26l-6.18 3.02L15 22.14l-5-4.87 6.91-1.01L20 10z"
+                    fill="#3b82f6"
+                    opacity="0.9"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="cloud-core">
+              <div class="core-ring ring-1"></div>
+              <div class="core-ring ring-2"></div>
+              <div class="core-center">
+                <svg
+                  viewBox="0 0 80 80"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="40"
+                    cy="40"
+                    r="38"
+                    stroke="url(#grad1)"
+                    stroke-width="1.5"
+                    opacity="0.4"
+                  />
+                  <path
+                    d="M40 16C27.85 16 18 25.85 18 38c0 .75.038 1.49.112 2.223C14.12 41.506 11 45.103 11 49.5 11 54.747 15.253 59 20.5 59h39c5.247 0 9.5-4.253 9.5-9.5 0-3.97-2.44-7.393-5.963-8.803.037-.4.072-.82.072-1.247C63 25.85 53.15 16 40 16z"
+                    fill="url(#grad2)"
+                    opacity="0.9"
+                  />
+                  <defs>
+                    <linearGradient id="grad1" x1="0" y1="0" x2="80" y2="80">
+                      <stop stop-color="#3b82f6" />
+                      <stop offset="1" stop-color="#06b6d4" />
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="11" y1="16" x2="63" y2="59">
+                      <stop stop-color="#3b82f6" />
+                      <stop offset="1" stop-color="#06b6d4" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </div>
+              <div class="floating-tags">
+                <span class="ftag" style="--tx: -80px; --ty: -30px">AKS</span>
+                <span class="ftag" style="--tx: 55px; --ty: -50px"
+                  >Terraform</span
+                >
+                <span class="ftag" style="--tx: 70px; --ty: 20px">RBAC</span>
+                <span class="ftag" style="--tx: -70px; --ty: 40px">CI/CD</span>
+                <span class="ftag" style="--tx: 10px; --ty: 70px">K8s</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="section">
+      <div class="container reveal">
+        <div class="section-label">// about me</div>
+        <h2 class="section-title">
+          Engineering Clouds,<br /><span class="gradient-text"
+            >Securing Systems</span
+          >
+        </h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Based in Lewisville, TX, I'm a Cloud Operations Engineer who's
+              spent 7+ years turning complex infrastructure challenges into
+              elegant, automated solutions. My work spans the full DevSecOps
+              lifecycle — from provisioning cloud-native architectures to
+              hardening security posture and slashing incident response times.
+            </p>
+            <p>
+              I specialize in the Microsoft Azure ecosystem, hold dual
+              Kubernetes certifications (CKA + CKS), and bring a security-first
+              mindset to every pipeline and cluster I touch. Whether migrating
+              monolithic workloads to AKS microservices or building zero-trust
+              access controls, I ship infrastructure that's production-grade
+              from day one.
+            </p>
+            <div class="about-details">
+              <div class="detail-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Lewisville, TX</span>
+              </div>
+              <div class="detail-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.58 4.9A2 2 0 0 1 3.56 2.73h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 18z"
+                  />
+                </svg>
+                <span>+1 (214) 714-2567</span>
+              </div>
+              <div class="detail-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                <span>oweneghaghe@gmail.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-visual">
+            <div class="terminal-card glass">
+              <div class="terminal-header">
+                <span class="t-dot red"></span>
+                <span class="t-dot yellow"></span>
+                <span class="t-dot green"></span>
+                <span class="t-title">owen@azure:~$</span>
+              </div>
+              <div class="terminal-body">
+                <div class="t-line"><span class="t-prompt">$</span> whoami</div>
+                <div class="t-line t-output">
+                  Owen Eghaghe &mdash; Cloud Operations Engineer
+                </div>
+                <div class="t-line">
+                  <span class="t-prompt">$</span> kubectl get expertise
+                </div>
+                <div class="t-line t-output">
+                  NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;STATUS&nbsp;&nbsp;&nbsp;YEARS
+                </div>
+                <div class="t-line t-output t-blue">
+                  Azure&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;7+
+                </div>
+                <div class="t-line t-output t-cyan">
+                  Kubernetes&nbsp;&nbsp;Running&nbsp;&nbsp;5+
+                </div>
+                <div class="t-line t-output t-blue">
+                  Terraform&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;5+
+                </div>
+                <div class="t-line t-output t-cyan">
+                  DevSecOps&nbsp;&nbsp;&nbsp;Running&nbsp;&nbsp;6+
+                </div>
+                <div class="t-line">
+                  <span class="t-prompt">$</span> az account show --security
+                </div>
+                <div class="t-line t-output t-green">✓ HIPAA Compliant</div>
+                <div class="t-line t-output t-green">✓ Zero Trust Enforced</div>
+                <div class="t-line t-output t-green">
+                  ✓ CKA &amp; CKS Certified
+                </div>
+                <div class="t-line t-blink">
+                  <span class="t-prompt">$</span>
+                  <span class="cursor-blink">▋</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-label reveal">// technical skills</div>
+        <h2 class="section-title reveal">
+          Tools of the <span class="gradient-text">Trade</span>
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path
+                    d="M3 15a4 4 0 0 0 4 4h9a5 5 0 1 0-.1-9.999 5.002 5.002 0 0 0-9.78 2.096A4.001 4.001 0 0 0 3 15z"
+                  />
+                </svg>
+              </div>
+              <h3>Cloud Platforms</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">Microsoft Azure</span>
+              <span class="pill">AWS</span>
+              <span class="pill">Azure AD</span>
+              <span class="pill">Azure App Services</span>
+              <span class="pill">Azure Front Door</span>
+              <span class="pill">Azure Blob Storage</span>
+              <span class="pill">Azure Key Vault</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Infrastructure as Code</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">Terraform</span>
+              <span class="pill">Bicep</span>
+              <span class="pill">ARM Templates</span>
+              <span class="pill">Bash</span>
+              <span class="pill">YAML</span>
+              <span class="pill">PowerShell</span>
+              <span class="pill">CloudFormation</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <circle cx="12" cy="12" r="3" />
+                  <path
+                    d="M19.07 4.93L16.24 7.76M4.93 19.07l2.83-2.83M19.07 19.07l-2.83-2.83M4.93 4.93l2.83 2.83"
+                  />
+                  <circle cx="12" cy="12" r="9" />
+                </svg>
+              </div>
+              <h3>DevOps & CI/CD</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">Azure DevOps</span>
+              <span class="pill">GitHub Actions</span>
+              <span class="pill">Jenkins</span>
+              <span class="pill">ArgoCD</span>
+              <span class="pill">Azure Pipelines</span>
+              <span class="pill">Git</span>
+              <span class="pill">SonarQube</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <circle cx="8.5" cy="8.5" r="1.5" />
+                  <polyline points="21 15 16 10 5 21" />
+                </svg>
+              </div>
+              <h3>Containers & Orchestration</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">Kubernetes</span>
+              <span class="pill">Docker</span>
+              <span class="pill">AKS</span>
+              <span class="pill">Helm</span>
+              <span class="pill">Kustomize</span>
+              <span class="pill">Portainer</span>
+              <span class="pill">ArgoCD</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3>Monitoring & Observability</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">Azure Monitor</span>
+              <span class="pill">Log Analytics</span>
+              <span class="pill">Grafana</span>
+              <span class="pill">Prometheus</span>
+              <span class="pill">App Insights</span>
+              <span class="pill">ELK Stack</span>
+              <span class="pill">CloudWatch</span>
+            </div>
+          </div>
+
+          <div class="skill-card glass reveal">
+            <div class="skill-card-header">
+              <div class="skill-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3>Security & Compliance</h3>
+            </div>
+            <div class="pill-group">
+              <span class="pill">RBAC</span>
+              <span class="pill">Azure Sentinel</span>
+              <span class="pill">Zero Trust</span>
+              <span class="pill">HIPAA</span>
+              <span class="pill">NSG / Firewall</span>
+              <span class="pill">IAM / KMS</span>
+              <span class="pill">SSL/TLS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE ===== -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-label reveal">// work history</div>
+        <h2 class="section-title reveal">
+          Where I've <span class="gradient-text">Shipped</span>
+        </h2>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">
+              <div class="tl-dot active"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <div class="tl-badge current">Current</div>
+                  <h3 class="tl-role">Azure Cloud Operations Engineer</h3>
+                  <div class="tl-company">Anywhere365</div>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period">Aug 2023 – Present</span>
+                  <span class="tl-location">Alpharetta, GA / Netherlands</span>
+                </div>
+              </div>
+              <ul class="tl-achievements">
+                <li>
+                  <span class="ach-metric">+40%</span>
+                  <span
+                    >deployment efficiency via Azure DevOps CI/CD pipelines for
+                    unified contact center apps</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-metric">−30%</span>
+                  <span
+                    >MTTR through Grafana + Log Analytics dashboards enabling
+                    real-time performance tracking</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Modular Terraform IaC design reducing duplication across
+                    global Azure environments</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Implemented Azure Front Door + Application Gateway for
+                    fault-tolerant global load balancing</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Enforced RBAC, Azure AD integration, and NSG/firewall rules
+                    under least-privilege principles</span
+                  >
+                </li>
+              </ul>
+              <div class="tl-tags">
+                <span>Azure DevOps</span><span>Terraform</span><span>AKS</span
+                ><span>Grafana</span><span>Azure Front Door</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <h3 class="tl-role">Azure Cloud Engineer</h3>
+                  <div class="tl-company">CareSource</div>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period">Jan 2022 – Jul 2023</span>
+                  <span class="tl-location">Dallas, TX</span>
+                </div>
+              </div>
+              <ul class="tl-achievements">
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Migrated monolithic applications to Azure-native
+                    microservices via AKS, App Services, and Azure
+                    Functions</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Designed custom Azure Policies enforcing HIPAA compliance
+                    and internal governance standards</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Integrated Azure Sentinel + third-party SIEM for proactive
+                    threat detection and forensic incident response</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Managed Key Vault to eliminate hardcoded secrets across all
+                    CI/CD pipelines and codebases</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Configured Azure Backup and Recovery Vaults for disaster
+                    recovery of mission-critical assets</span
+                  >
+                </li>
+              </ul>
+              <div class="tl-tags">
+                <span>AKS</span><span>Azure Sentinel</span><span>HIPAA</span
+                ><span>Key Vault</span><span>Terraform</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal">
+            <div class="timeline-marker">
+              <div class="tl-dot"></div>
+            </div>
+            <div class="timeline-card glass">
+              <div class="tl-header">
+                <div>
+                  <h3 class="tl-role">AWS Cloud Support Engineer</h3>
+                  <div class="tl-company">Mizo LLC</div>
+                </div>
+                <div class="tl-meta">
+                  <span class="tl-period">Jan 2019 – Dec 2021</span>
+                  <span class="tl-location">Dallas, TX</span>
+                </div>
+              </div>
+              <ul class="tl-achievements">
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Zero-downtime migration of legacy systems to EC2, S3, and
+                    RDS Multi-AZ fault-tolerant architectures</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >CloudFormation templates standardizing provisioning and
+                    eliminating manual configuration drift</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Built Jenkins + CodePipeline continuous delivery pipelines
+                    supporting agile release cycles</span
+                  >
+                </li>
+                <li>
+                  <span class="ach-icon">⬡</span>
+                  <span
+                    >Hardened environments via custom IAM policies, KMS key
+                    rotations, VPC, NACLs, and Security Groups</span
+                  >
+                </li>
+              </ul>
+              <div class="tl-tags">
+                <span>AWS EC2</span><span>S3</span><span>RDS</span
+                ><span>CloudFormation</span><span>Jenkins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS ===== -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-label reveal">// credentials</div>
+        <h2 class="section-title reveal">
+          Certifications & <span class="gradient-text">Education</span>
+        </h2>
+        <div class="certs-grid">
+          <div class="cert-card glass reveal">
+            <div class="cert-badge ck">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="28"
+                  stroke="url(#cg1)"
+                  stroke-width="2"
+                />
+                <text
+                  x="50%"
+                  y="38%"
+                  text-anchor="middle"
+                  font-size="10"
+                  font-weight="700"
+                  fill="#06b6d4"
+                  dy="0"
+                >
+                  CKA
+                </text>
+                <defs>
+                  <linearGradient id="cg1" x1="0" y1="0" x2="60" y2="60">
+                    <stop stop-color="#3b82f6" />
+                    <stop offset="1" stop-color="#06b6d4" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Certified Kubernetes Administrator</h4>
+              <p>Linux Foundation</p>
+              <span class="cert-id">LF-2y2366cxgv</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+
+          <div class="cert-card glass reveal">
+            <div class="cert-badge cks-b">
+              <svg viewBox="0 0 60 60" fill="none">
+                <circle
+                  cx="30"
+                  cy="30"
+                  r="28"
+                  stroke="url(#cg2)"
+                  stroke-width="2"
+                />
+                <text
+                  x="50%"
+                  y="38%"
+                  text-anchor="middle"
+                  font-size="10"
+                  font-weight="700"
+                  fill="#3b82f6"
+                  dy="0"
+                >
+                  CKS
+                </text>
+                <defs>
+                  <linearGradient id="cg2" x1="0" y1="0" x2="60" y2="60">
+                    <stop stop-color="#6366f1" />
+                    <stop offset="1" stop-color="#3b82f6" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Certified Kubernetes Security Specialist</h4>
+              <p>Linux Foundation</p>
+              <span class="cert-id">LF-lz2vr9f2yg</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+
+          <div class="cert-card glass reveal">
+            <div class="cert-badge azure">
+              <svg viewBox="0 0 60 60" fill="none">
+                <rect
+                  width="60"
+                  height="60"
+                  rx="8"
+                  fill="#0078d4"
+                  opacity="0.15"
+                />
+                <path
+                  d="M30 12L18 32h8l-4 16 18-24H26l8-12H30z"
+                  fill="#0078d4"
+                  opacity="0.9"
+                />
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Azure Security Engineer Associate</h4>
+              <p>Microsoft Certified</p>
+              <span class="cert-id">AZ-500</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+
+          <div class="cert-card glass reveal">
+            <div class="cert-badge azure">
+              <svg viewBox="0 0 60 60" fill="none">
+                <rect
+                  width="60"
+                  height="60"
+                  rx="8"
+                  fill="#0078d4"
+                  opacity="0.15"
+                />
+                <path
+                  d="M30 16C22.27 16 16 22.27 16 30c0 .42.021.838.063 1.25C13.93 31.992 12 34.1 12 36.5 12 39.538 14.462 42 17.5 42h25c3.038 0 5.5-2.462 5.5-5.5 0-2.188-1.307-4.097-3.213-5.007.022-.33.035-.66.035-.993C44.822 22.27 38.55 16 30 16z"
+                  fill="#0078d4"
+                  opacity="0.7"
+                />
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Azure Fundamentals</h4>
+              <p>Microsoft Certified</p>
+              <span class="cert-id">AZ-900</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+
+          <div class="cert-card glass reveal">
+            <div class="cert-badge sec">
+              <svg viewBox="0 0 60 60" fill="none">
+                <polygon
+                  points="30,5 55,20 55,40 30,55 5,40 5,20"
+                  stroke="url(#cg3)"
+                  stroke-width="2"
+                  fill="none"
+                />
+                <path
+                  d="M30 15l-12 7v14l12 7 12-7V22L30 15z"
+                  fill="url(#cg3)"
+                  opacity="0.6"
+                />
+                <defs>
+                  <linearGradient id="cg3" x1="0" y1="0" x2="60" y2="60">
+                    <stop stop-color="#f59e0b" />
+                    <stop offset="1" stop-color="#ef4444" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>CompTIA Security+</h4>
+              <p>CompTIA</p>
+              <span class="cert-id">SY0-701 | COMP001022817310</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+
+          <div class="cert-card glass reveal">
+            <div class="cert-badge cisco">
+              <svg viewBox="0 0 60 60" fill="none">
+                <rect
+                  width="60"
+                  height="60"
+                  rx="8"
+                  fill="#1ba0d7"
+                  opacity="0.15"
+                />
+                <path
+                  d="M15 30h5v6h-5zM20 25h5v11h-5zM25 22h5v14h-5zM30 25h5v11h-5zM35 28h5v8h-5z"
+                  fill="#1ba0d7"
+                  opacity="0.9"
+                />
+              </svg>
+            </div>
+            <div class="cert-info">
+              <h4>Cisco CCNA 200-301</h4>
+              <p>Cisco Networking</p>
+              <span class="cert-id">CSCO14931002</span>
+            </div>
+            <div class="cert-status active">Active</div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="education-grid reveal">
+          <div class="edu-card glass">
+            <div class="edu-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="edu-info">
+              <h4>Bachelor of Engineering</h4>
+              <p>Marine Engineering</p>
+              <span>Niger Delta University</span>
+            </div>
+          </div>
+          <div class="edu-card glass">
+            <div class="edu-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+              >
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                <path d="M6 12v5c3 3 9 3 12 0v-5" />
+              </svg>
+            </div>
+            <div class="edu-info">
+              <h4>Associate Degree</h4>
+              <p>Automobile & Diesel Technology</p>
+              <span>Universal Technical Institute</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-label reveal">// get in touch</div>
+        <h2 class="section-title reveal">
+          Let's Build Something <span class="gradient-text">Together</span>
+        </h2>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <p class="contact-lead">
+              Open to senior Cloud Engineering, DevSecOps, and Platform
+              Engineering roles. Let's talk about what your infrastructure
+              needs.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:oweneghaghe@gmail.com" class="contact-link">
+                <div class="cl-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div class="cl-text">
+                  <span class="cl-label">Email</span>
+                  <span class="cl-value">oweneghaghe@gmail.com</span>
+                </div>
+              </a>
+              <a href="tel:+12147142567" class="contact-link">
+                <div class="cl-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13.5 19.79 19.79 0 0 1 1.58 4.9A2 2 0 0 1 3.56 2.73h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.5a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 18z"
+                    />
+                  </svg>
+                </div>
+                <div class="cl-text">
+                  <span class="cl-label">Phone</span>
+                  <span class="cl-value">+1 (214) 714-2567</span>
+                </div>
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                class="contact-link"
+              >
+                <div class="cl-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                    />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                </div>
+                <div class="cl-text">
+                  <span class="cl-label">LinkedIn</span>
+                  <span class="cl-value">Connect with Owen</span>
+                </div>
+              </a>
+              <a href="https://github.com" target="_blank" class="contact-link">
+                <div class="cl-icon">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                </div>
+                <div class="cl-text">
+                  <span class="cl-label">GitHub</span>
+                  <span class="cl-value">github.com/owen-cloud</span>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal">
+            <form class="contact-form glass" id="contact-form">
+              <div class="form-group">
+                <input type="text" id="name" required placeholder=" " />
+                <label for="name">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" required placeholder=" " />
+                <label for="email">Email Address</label>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" placeholder=" " />
+                <label for="subject">Subject</label>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="5"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="message">Your Message</label>
+              </div>
+              <button type="submit" class="btn-primary btn-full">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;</span>Owen<span class="brand-accent"
+            >.</span
+          >cloud<span class="brand-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">
+          © 2025 Owen Eghaghe. Built with purpose, deployed with precision.
+        </p>
+        <div class="footer-links">
+          <a href="#hero">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
