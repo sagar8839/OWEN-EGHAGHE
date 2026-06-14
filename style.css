@@ -319,6 +319,7 @@ img {
   margin-bottom: 16px;
 }
 
+/* FIX 1: hero-role — removed role-prefix, cursor is now a CSS-animated pipe */
 .hero-role {
   font-family: var(--font-mono);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
@@ -327,20 +328,20 @@ img {
   height: 28px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 0;
 }
 
-.role-prefix {
-  color: var(--blue);
-}
 .typed-text {
   color: var(--cyan);
 }
 
+/* Typewriter cursor — pure CSS blink, no literal character rendering issues */
 .cursor {
-  animation: blink 1s step-end infinite;
+  display: inline-block;
   color: var(--blue);
   font-weight: 300;
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
 }
 @keyframes blink {
   50% {
@@ -727,10 +728,20 @@ img {
 }
 .t-blink {
   margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.cursor-blink {
+
+/* FIX 2: CSS-animated terminal cursor — replaces the literal ▋ character */
+.terminal-cursor {
+  display: inline-block;
+  width: 7px;
+  height: 13px;
+  background: var(--cyan);
+  border-radius: 1px;
   animation: blink 1s step-end infinite;
-  color: var(--cyan);
+  vertical-align: middle;
 }
 
 /* ===== SKILLS ===== */
@@ -1060,7 +1071,17 @@ img {
   color: var(--green);
 }
 
-/* ===== EDUCATION ===== */
+/* ===== EDUCATION — subsection below certs ===== */
+/* FIX 4: Education now sits as a subsection beneath certifications */
+.edu-subsection-label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--cyan);
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+  margin-top: 8px;
+}
+
 .education-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -1,11 +1,5 @@
 /* ============================================================
    OWEN EGHAGHE — PORTFOLIO JS
-   - Particle canvas background
-   - Typing effect
-   - Intersection Observer scroll reveals
-   - Navbar scroll state
-   - Hamburger menu
-   - Smooth form handling
    ============================================================ */
 
 "use strict";
@@ -46,8 +40,6 @@
 
   function draw() {
     ctx.clearRect(0, 0, W, H);
-
-    // Draw connections between nearby particles
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -63,8 +55,6 @@
         }
       }
     }
-
-    // Draw particles
     particles.forEach((p) => {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
@@ -72,18 +62,13 @@
       ctx.globalAlpha = p.alpha;
       ctx.fill();
       ctx.globalAlpha = 1;
-
-      // Move
       p.x += p.vx;
       p.y += p.vy;
-
-      // Wrap edges
       if (p.x < -5) p.x = W + 5;
       if (p.x > W + 5) p.x = -5;
       if (p.y < -5) p.y = H + 5;
       if (p.y > H + 5) p.y = -5;
     });
-
     requestAnimationFrame(draw);
   }
 
@@ -93,6 +78,7 @@
 })();
 
 // ===== TYPING EFFECT =====
+// FIX 1: Typing now starts with an empty string — no pre-rendered "|" artifact on load
 (function initTyping() {
   const el = document.getElementById("typed-text");
   if (!el) return;
@@ -107,7 +93,9 @@
   let phraseIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
-  let pauseTimer = null;
+
+  // Start blank — the CSS cursor handles the blinking pipe
+  el.textContent = "";
 
   function type() {
     const current = phrases[phraseIndex];
@@ -123,31 +111,28 @@
     let delay = isDeleting ? 45 : 75;
 
     if (!isDeleting && charIndex === current.length) {
-      // Pause at end of word before deleting
       delay = 2000;
       isDeleting = true;
     } else if (isDeleting && charIndex === 0) {
-      // Move to next phrase
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
       delay = 400;
     }
 
-    pauseTimer = setTimeout(type, delay);
+    setTimeout(type, delay);
   }
 
-  type();
+  // Small initial delay so page finishes rendering before typing starts
+  setTimeout(type, 600);
 })();
 
 // ===== NAVBAR SCROLL STATE =====
 (function initNavbar() {
   const nav = document.getElementById("navbar");
   if (!nav) return;
-
   function onScroll() {
     nav.classList.toggle("scrolled", window.scrollY > 20);
   }
-
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
@@ -164,7 +149,6 @@
     btn.setAttribute("aria-expanded", open);
   });
 
-  // Close on nav link click
   links.querySelectorAll("a").forEach((a) => {
     a.addEventListener("click", () => {
       links.classList.remove("open");
@@ -172,7 +156,6 @@
     });
   });
 
-  // Close on outside click
   document.addEventListener("click", (e) => {
     if (!btn.contains(e.target) && !links.contains(e.target)) {
       links.classList.remove("open");
@@ -181,16 +164,15 @@
   });
 })();
 
-// ===== SCROLL REVEAL (Intersection Observer) =====
+// ===== SCROLL REVEAL =====
 (function initReveal() {
   const revealEls = document.querySelectorAll(".reveal");
   if (!revealEls.length) return;
 
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Stagger siblings slightly
           const siblings = entry.target.parentElement.querySelectorAll(
             ".reveal:not(.visible)",
           );
@@ -209,7 +191,7 @@
   revealEls.forEach((el) => observer.observe(el));
 })();
 
-// ===== ACTIVE NAV LINK ON SCROLL =====
+// ===== ACTIVE NAV LINK =====
 (function initActiveNav() {
   const sections = document.querySelectorAll("section[id]");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -220,7 +202,6 @@
       const top = section.offsetTop - 120;
       if (window.scrollY >= top) current = section.id;
     });
-
     navLinks.forEach((link) => {
       link.classList.remove("active");
       if (link.getAttribute("href") === `#${current}`) {
@@ -239,13 +220,12 @@
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
-
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.innerHTML;
 
     btn.disabled = true;
     btn.innerHTML = `
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
            style="animation:spin 1s linear infinite">
         <path d="M21 12a9 9 0 0 1-9 9"/>
         <path d="M3 12a9 9 0 0 1 9-9"/>
@@ -253,7 +233,6 @@
       Sending...
     `;
 
-    // Simulate send (replace with real endpoint as needed)
     setTimeout(() => {
       btn.innerHTML = `
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -274,7 +253,7 @@
   });
 })();
 
-// ===== PILL HOVER GLOW (random color cycle) =====
+// ===== PILL HOVER GLOW =====
 (function initPillGlow() {
   const pills = document.querySelectorAll(".pill");
   const glows = [
@@ -293,7 +272,7 @@
   });
 })();
 
-// ===== KEYFRAME for spinner =====
+// ===== SPIN KEYFRAME =====
 (function injectSpinKeyframe() {
   const style = document.createElement("style");
   style.textContent = "@keyframes spin { to { transform: rotate(360deg); } }";

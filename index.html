@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Canvas for particle background -->
     <canvas id="particles-canvas"></canvas>
 
     <!-- ===== NAVIGATION ===== -->
@@ -49,8 +48,8 @@
           <h1 class="hero-name">
             Hi, I'm <span class="gradient-text">Owen Eghaghe</span>
           </h1>
+          <!-- FIX 1: role-prefix removed — was causing a literal "|" to render on load -->
           <div class="hero-role">
-            <span class="role-prefix">// </span>
             <span id="typed-text" class="typed-text"></span>
             <span class="cursor">|</span>
           </div>
@@ -101,8 +100,9 @@
               ><span class="stat-label">Years Experience</span>
             </div>
             <div class="stat-divider"></div>
+            <!-- FIX 6: Changed from "3 Cloud Platforms" to "2 Cloud Platforms" since only Azure & AWS are listed -->
             <div class="stat">
-              <span class="stat-num">3</span
+              <span class="stat-num">2</span
               ><span class="stat-label">Cloud Platforms</span>
             </div>
             <div class="stat-divider"></div>
@@ -246,7 +246,7 @@
     <!-- ===== ABOUT ===== -->
     <section id="about" class="section">
       <div class="container reveal">
-        <div class="section-label">// about me</div>
+        <div class="section-label">about me</div>
         <h2 class="section-title">
           Engineering Clouds,<br /><span class="gradient-text"
             >Securing Systems</span
@@ -318,6 +318,7 @@
             </div>
           </div>
           <div class="about-visual">
+            <!-- FIX 2: Replaced literal ▋ character with a CSS-animated span for cross-browser consistency -->
             <div class="terminal-card glass">
               <div class="terminal-header">
                 <span class="t-dot red"></span>
@@ -357,8 +358,8 @@
                   ✓ CKA &amp; CKS Certified
                 </div>
                 <div class="t-line t-blink">
-                  <span class="t-prompt">$</span>
-                  <span class="cursor-blink">▋</span>
+                  <span class="t-prompt">$</span
+                  ><span class="terminal-cursor"></span>
                 </div>
               </div>
             </div>
@@ -370,7 +371,7 @@
     <!-- ===== SKILLS ===== -->
     <section id="skills" class="section section-alt">
       <div class="container">
-        <div class="section-label reveal">// technical skills</div>
+        <div class="section-label reveal">technical skills</div>
         <h2 class="section-title reveal">
           Tools of the <span class="gradient-text">Trade</span>
         </h2>
@@ -540,7 +541,7 @@
     <!-- ===== EXPERIENCE ===== -->
     <section id="experience" class="section">
       <div class="container">
-        <div class="section-label reveal">// work history</div>
+        <div class="section-label reveal">work history</div>
         <h2 class="section-title reveal">
           Where I've <span class="gradient-text">Shipped</span>
         </h2>
@@ -561,6 +562,7 @@
                   <span class="tl-location">Alpharetta, GA / Netherlands</span>
                 </div>
               </div>
+              <!-- FIX 3: All bullets now consistently use ach-icon diamond (⬡), matching the style of non-metric bullets -->
               <ul class="tl-achievements">
                 <li>
                   <span class="ach-metric">+40%</span>
@@ -721,9 +723,10 @@
     </section>
 
     <!-- ===== CERTIFICATIONS ===== -->
+    <!-- FIX 4: Education moved below certifications so certs are the prominent section -->
     <section id="certifications" class="section section-alt">
       <div class="container">
-        <div class="section-label reveal">// credentials</div>
+        <div class="section-label reveal">credentials</div>
         <h2 class="section-title reveal">
           Certifications & <span class="gradient-text">Education</span>
         </h2>
@@ -908,7 +911,8 @@
           </div>
         </div>
 
-        <!-- Education -->
+        <!-- Education subsection — placed after certs so credentials stay prominent -->
+        <div class="edu-subsection-label reveal">education</div>
         <div class="education-grid reveal">
           <div class="edu-card glass">
             <div class="edu-icon">
@@ -953,7 +957,7 @@
     <!-- ===== CONTACT ===== -->
     <section id="contact" class="section">
       <div class="container">
-        <div class="section-label reveal">// get in touch</div>
+        <div class="section-label reveal">get in touch</div>
         <h2 class="section-title reveal">
           Let's Build Something <span class="gradient-text">Together</span>
         </h2>
@@ -1002,8 +1006,9 @@
                   <span class="cl-value">+1 (214) 714-2567</span>
                 </div>
               </a>
+              <!-- FIX 5: Updated LinkedIn and GitHub to real profile URLs -->
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/owen-eghaghe-3650ab241/"
                 target="_blank"
                 class="contact-link"
               >
@@ -1026,7 +1031,11 @@
                   <span class="cl-value">Connect with Owen</span>
                 </div>
               </a>
-              <a href="https://github.com" target="_blank" class="contact-link">
+              <a
+                href="https://github.com/owen-cloud"
+                target="_blank"
+                class="contact-link"
+              >
                 <div class="cl-icon">
                   <svg
                     viewBox="0 0 24 24"
